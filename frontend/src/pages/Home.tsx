@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PdfUploader } from "@/components/PdfUploader";
 import { ImageUploader } from "@/components/ImageUploader";
 import { DisplayResult } from "@/components/DisplayResult";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [pdfFile, setPdfFile] = useState<File | null>(null);
@@ -15,7 +16,19 @@ const Home = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Invoice Information Extractor</h1>
+      <h1 className="text-3xl font-bold mb-4">Invoice Information Extractor</h1>
+      <div className="mb-4">
+        You can use these sample PDFs and image to check this.{" "}
+        <Link
+          to={
+            "https://drive.google.com/drive/folders/1Q7sU_eiisOvtCAFCRSesyMDkVsMtNF7h"
+          }
+          target="_blank"
+          className=" text-blue-600 underline"
+        >
+          Link
+        </Link>
+      </div>
       <Tabs defaultValue="pdf" className="w-full">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="pdf">PDF Upload</TabsTrigger>
