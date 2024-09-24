@@ -15,7 +15,7 @@ const Home = () => {
   const [error, setError] = useState<string | null>(null);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 min-h-screen">
       <h1 className="text-3xl font-bold mb-4">Invoice Information Extractor</h1>
       <div className="mb-4">
         You can use these sample PDFs and image to check this.{" "}
